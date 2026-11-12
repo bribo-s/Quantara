@@ -16,7 +16,10 @@ if(!cached) {
 }
 
 export const connectToDatabase = async () => {
-    if(!MONGODB_URI) throw new Error('MONGODB_URI must be set within .env');
+    if(!MONGODB_URI) {
+        // Return null gracefully in Demo/Recruiter mode without throwing
+        return null;
+    }
 
     if(cached.conn) return cached.conn;
 
@@ -28,7 +31,8 @@ export const connectToDatabase = async () => {
         cached.conn = await cached.promise;
     } catch (err) {
         cached.promise = null;
-        throw err;
+        console.warn('[MongoDB] Connection attempt failed, continuing in demo mode:', (err as Error).message);
+        return null;
     }
 
     console.log(`Connected to database ${process.env.NODE_ENV} - ${MONGODB_URI}`);

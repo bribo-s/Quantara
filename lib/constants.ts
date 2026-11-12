@@ -1,7 +1,7 @@
 export const NAV_ITEMS = [
     { href: '/', label: 'Dashboard' },
+    { href: '/watchlist', label: 'Watchlist & Alerts' },
     { href: '/search', label: 'Search' },
-    // { href: '/watchlist', label: 'Watchlist' },
 ];
 
 // Sign-up form select options
@@ -336,4 +336,90 @@ export const WATCHLIST_TABLE_HEADER = [
     'P/E Ratio',
     'Alert',
     'Action',
+];
+
+export const DEFAULT_STOCKS: StockWithWatchlistStatus[] = [
+  { symbol: 'NVDA', name: 'NVIDIA Corporation', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'AAPL', name: 'Apple Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'MSFT', name: 'Microsoft Corporation', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'TSLA', name: 'Tesla, Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'AMZN', name: 'Amazon.com, Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'GOOGL', name: 'Alphabet Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'META', name: 'Meta Platforms, Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'JPM', name: 'JPMorgan Chase & Co.', exchange: 'NYSE', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'AMD', name: 'Advanced Micro Devices, Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'NFLX', name: 'Netflix, Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'PLTR', name: 'Palantir Technologies Inc.', exchange: 'NYSE', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'COIN', name: 'Coinbase Global, Inc.', exchange: 'NASDAQ', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'DIS', name: 'The Walt Disney Company', exchange: 'NYSE', type: 'Common Stock', isInWatchlist: false },
+  { symbol: 'V', name: 'Visa Inc.', exchange: 'NYSE', type: 'Common Stock', isInWatchlist: false },
+];
+
+export const DEFAULT_MARKET_NEWS: MarketNewsArticle[] = [
+  {
+    id: 101,
+    headline: "NVIDIA Next-Gen AI Architecture Drives Surge in Enterprise Chip Demand",
+    summary: "NVIDIA reports accelerating hyperscaler capital expenditures and enterprise demand for AI data center infrastructure and advanced accelerators.",
+    source: "Bloomberg Markets",
+    url: "https://finance.yahoo.com/quote/NVDA",
+    datetime: 1731388800,
+    category: "technology",
+    related: "NVDA",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=60"
+  },
+  {
+    id: 102,
+    headline: "Federal Reserve Signals Data-Driven Path as Core Inflation Trends Near Target",
+    summary: "Central bank policymakers highlight stabilizing labor metrics and consumer resilience, offering balanced outlook on upcoming interest rate decisions.",
+    source: "Wall Street Journal",
+    url: "https://finance.yahoo.com",
+    datetime: 1731385200,
+    category: "general",
+    related: "SPY",
+    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&auto=format&fit=crop&q=60"
+  },
+  {
+    id: 103,
+    headline: "Apple Intelligence Ecosystem Expands With New Enterprise Developer Tools",
+    summary: "Apple unveils deeper machine learning workflows across macOS and iOS, expanding privacy-first on-device generative capabilities.",
+    source: "Reuters",
+    url: "https://finance.yahoo.com/quote/AAPL",
+    datetime: 1731381600,
+    category: "technology",
+    related: "AAPL",
+    image: "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&auto=format&fit=crop&q=60"
+  },
+  {
+    id: 104,
+    headline: "Microsoft Cloud Revenue Surpasses Projections on Generative AI Workloads",
+    summary: "Azure cloud growth beats Wall Street forecasts as global enterprises deploy custom AI copilots and automated workflows at scale.",
+    source: "Financial Times",
+    url: "https://finance.yahoo.com/quote/MSFT",
+    datetime: 1731378000,
+    category: "technology",
+    related: "MSFT",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=60"
+  },
+  {
+    id: 105,
+    headline: "Electric Vehicle Market Competitiveness Intensifies Amid Full Self-Driving Rollout",
+    summary: "Tesla and global automakers push autonomous fleet capabilities and software subscription models to expand recurring margin profiles.",
+    source: "CNBC",
+    url: "https://finance.yahoo.com/quote/TSLA",
+    datetime: 1731374400,
+    category: "business",
+    related: "TSLA",
+    image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&auto=format&fit=crop&q=60"
+  },
+  {
+    id: 106,
+    headline: "Palantir Expands Defense and Commercial AIP Deployments Across Fortune 500",
+    summary: "Rapid adoption of the Artificial Intelligence Platform (AIP) accelerates customer acquisition and contract values in healthcare and logistics.",
+    source: "MarketWatch",
+    url: "https://finance.yahoo.com/quote/PLTR",
+    datetime: 1731370800,
+    category: "technology",
+    related: "PLTR",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60"
+  }
 ];

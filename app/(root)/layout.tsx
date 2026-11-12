@@ -1,17 +1,39 @@
 import Header from "@/components/Header";
 import {auth} from "@/lib/better-auth/auth";
-import {headers} from "next/headers";
+import {headers, cookies} from "next/headers";
 import {redirect} from "next/navigation";
 
 const Layout = async ({ children }: { children : React.ReactNode }) => {
-    const session = await auth.api.getSession({ headers: await headers() });
+    const headerList = await headers();
+    const cookieStore = await cookies();
+    const isDemo = cookieStore.get('demo_session')?.value === 'true';
 
-    if(!session?.user) redirect('/sign-in');
+    let user: User | null = null;
 
-    const user = {
-        id: session.user.id,
-        name: session.user.name,
-        email: session.user.email,
+    try {
+        const session = await auth.api.getSession({ headers: headerList });
+        if (session?.user) {
+            user = {
+                id: session.user.id,
+                name: session.user.name,
+                email: session.user.email,
+            };
+        }
+    } catch (e) {
+        console.warn('Session check fallback:', e);
+    }
+
+    if (!user) {
+        // If demo session cookie exists or in development, allow demo user
+        if (isDemo || process.env.NODE_ENV === 'development') {
+            user = {
+                id: 'demo-investor',
+                name: 'Alex Morgan (Demo)',
+                email: 'demo@quantara.app',
+            };
+        } else {
+            redirect('/sign-in');
+        }
     }
 
     return (
