@@ -1,7 +1,5 @@
-# 🚀 Signalist: AI-Powered Real-Time Stock Market Platform
+# 🚀 Quantara: AI-Powered Real-Time Stock Market Platform
 ### *Resume Project Portfolio Guide & Technical Architecture*
-
-![Signalist Banner](public/readme/hero.webp)
 
 ---
 
@@ -39,7 +37,7 @@ flowchart TD
         FH["Finnhub API (Live Quotes, News, Profiles)"]
         FallbackData["Institutional Fallback Dataset"]
         Gemini["Google Gemini AI (Real-time Synthesis)"]
-        FallbackAI["Signalist Intelligence Engine"]
+        FallbackAI["Quantara Intelligence Engine"]
     end
     
     subgraph Background ["Event-Driven Workflows (Inngest)"]
@@ -77,7 +75,7 @@ flowchart TD
 | **Framework** | Next.js 15 (App Router, Server Actions, Server Components) |
 | **Language** | TypeScript 5 (Strict Mode) |
 | **Styling** | Tailwind CSS v4, Lucide Icons, Shadcn UI primitives |
-| **AI Engine** | Google Gemini 1.5/2.5 Flash + Signalist Intelligence Engine |
+| **AI Engine** | Google Gemini 1.5/2.5 Flash + Quantara Intelligence Engine |
 | **Financial Data** | Finnhub Real-Time API + TradingView External Embeds |
 | **Workflow Engine**| Inngest (Event-driven workflows, Scheduled Cron, AI inference) |
 | **Authentication**| Better Auth (Credentials, Next.js Cookie Session, Demo Mode) |
@@ -111,7 +109,7 @@ GEMINI_API_KEY=your_gemini_key
 MONGODB_URI=your_mongodb_atlas_uri
 
 # Better Auth Secret
-BETTER_AUTH_SECRET=signalist_demo_super_secret_key_1234567890
+BETTER_AUTH_SECRET=Quantara_demo_super_secret_key_1234567890
 BETTER_AUTH_URL=http://localhost:3000
 ```
 
