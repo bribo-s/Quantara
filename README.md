@@ -4,7 +4,7 @@ Quantara is a stock tracking app with live market data, charts, personal watchli
 
 **Live demo** https://quantara-alpha-eight.vercel.app/
 
-![Quantara banner](public/readme/hero.webp)
+![Quantara dashboard with AI market pulse, market overview, and stock heatmap](public/readme/Quantara%20Demo%20Dashboard.png)
 
 ![Next.js](https://img.shields.io/badge/-Next.js-black?style=for-the-badge&logoColor=white&logo=next.js&color=black)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6)
